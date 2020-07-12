@@ -22,7 +22,7 @@ Package: librtcom-eventlogger-plugins-dev
 Section: libdevel
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
- librtcom-eventlogger-plugins1 (= ${Source-Version}),
+ librtcom-eventlogger-plugins1 (= ${binary:Version}),
 Description: Event Logger Library plugins. Development files.
   Event Logger Library plugins.
   .
