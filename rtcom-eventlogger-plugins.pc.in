@@ -1,0 +1,11 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: rtcom-eventlogger-plugins
+Description: rtcom-eventlogger plugins
+Requires: glib-2.0 >= 2.6.4 gobject-2.0 >= 2.6.4 gmodule-no-export-2.0 >= 2.6.4 rtcom-eventlogger >= 0.43
+Version: @VERSION@
+Libs: -L${libdir} -lrtcom-el-plugin-call -lrtcom-el-plugin-sms -lrtcom-el-plugin-chat
+Cflags: -I${includedir}

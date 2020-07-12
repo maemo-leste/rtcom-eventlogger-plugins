@@ -1,0 +1,53 @@
+Source: rtcom-eventlogger-plugins
+Priority: extra
+Maintainer: Senko Rasic <senko.rasic@collabora.co.uk>
+Build-Depends: cdbs, debhelper (>= 5), autotools-dev, libglib2.0-dev, librtcom-eventlogger-dev(>= 1.1), libsqlite3-dev
+Standards-Version: 3.7.2
+Section: libs
+
+Package: librtcom-eventlogger-plugins1
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, rtcom-call-ui-l10n-mr0 | rtcom-call-ui-l10n-mr, librtcom-eventlogger-plugins0 (= ${Source-Version})
+Description: Event Logger Library plugins.
+  Event Logger Library plugins.
+
+Package: librtcom-eventlogger-plugins1-dbg
+Section: libdevel
+Architecture: any
+Depends: librtcom-eventlogger-plugins1 (= ${Source-Version})
+Description: Event Logger Library plugins. Debug symbols
+  Event Logger Library plugins.
+  .
+  Debug symbols
+
+Package: librtcom-eventlogger-plugins0
+Section: libs
+Architecture: any
+Description: Event Logger library plugins (transitional dummy package)
+  Transitional dummy package to ensure SSU and migration to librtcom-eventlogger-plugins1
+  .
+  If your application depends on librtcom-eventlogger-plugins0, it will stop working.
+  Please port it to librtcom-eventlogger-plugins1. The eventlogger documentation
+  explains what the changes are and how to port your application.
+
+Package: librtcom-eventlogger-plugins0-dbg
+Section: libdevel
+Architecture: any
+Depends: librtcom-eventlogger-plugins0 (= ${Source-Version})
+Description: Event Logger library plugins (transitional dummy package)
+  Transitional dummy package to ensure SSU and migration to librtcom-eventlogger-plugins1
+  .
+  If your application depends on librtcom-eventlogger-plugins0, it will stop working.
+  Please port it to librtcom-eventlogger-plugins1. The eventlogger documentation
+  explains what the changes are and how to port your application.
+
+Package: librtcom-eventlogger-plugins-dev
+Section: libdevel
+Architecture: any
+Depends: librtcom-eventlogger-plugins1 (= ${Source-Version}), libsqlite3-dev
+Description: Event Logger Library plugins. Development files.
+  Event Logger Library plugins.
+  .
+  Development files.
+

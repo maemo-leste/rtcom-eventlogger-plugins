@@ -1,0 +1,339 @@
+rtcom-eventlogger-plugins (1.4-1+0m5) unstable; urgency=low
+
+  * This entry has been added by BIFH queue processor
+    Suffix +0m5 added to package revision
+
+ -- Mahawadhi Ratna <ext-ratna.2.mahawadhi@nokia.com>  Thu, 04 Feb 2010 11:40:18 +0200
+
+rtcom-eventlogger-plugins (1.4-1) unstable; urgency=low
+
+  * Fixes: NB#154356 - SSU update is not happening from PR1.1.1 to PR1.2
+    librtcom-eventlogger-plugins1 depends now on
+    librtcom-eventlogger-plugins0 so SSU works and HAM is happy.
+    This breaks any 3th party app which depends on
+    librtcom-eventlogger-plugins0 which thinks its dependency is fulfilled! 
+
+ -- Reto Zingg <reto.zingg@nokia.com>  Wed, 03 Feb 2010 15:45:08 +0200
+
+rtcom-eventlogger-plugins (1.3) unstable; urgency=low
+
+  * Providing a transitional dummy package for librtcom-eventlogger-plugins0 to
+    librtcom-eventlogger-plugins1 transition. Fixes: NB#154356
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Tue, 26 Jan 2010 11:33:57 +0100
+
+rtcom-eventlogger-plugins (1.2-1) unstable; urgency=low
+
+  * Show error icon for both temporary and perm errors. Fixes: NB#148958
+  * Reverted fake Provides packaging clause; package now correctly conflicts
+    with librtcom-eventlogger-plugins0
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Thu, 21 Jan 2010 15:37:52 +0100
+
+rtcom-eventlogger-plugins (1.1-1.1) unstable; urgency=low
+
+  * Updated to new RTComElIter 1.1 API
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Tue, 08 Dec 2009 11:32:26 +0100
+
+rtcom-eventlogger-plugins (1.0-1.2) unstable; urgency=low
+
+  * Marked as Provides librtcom-eventlogger-plugins0 for BIFH recompile bootstrapping
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Thu, 26 Nov 2009 15:33:03 +0100
+
+rtcom-eventlogger-plugins (1.0-1) unstable; urgency=low
+
+  * Updated event types as per the db update in rtcom-eventlogger 1.0
+  * Use direction column instead of encoding it in event type name
+  * Using flags instead of groupuid value hack to identify groupchat messages
+  * Using libtool versioning
+  * Requires rtcom-eventlogger 1.0
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Fri, 20 Nov 2009 11:38:51 +0100
+
+rtcom-eventlogger-plugins (0.32-1) unstable; urgency=low
+
+  * Don't count missed calls if grouping is not by contact. Fixes: NB#140981.
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Wed, 14 Oct 2009 17:10:35 +0200
+
+rtcom-eventlogger-plugins (0.30-2) unstable; urgency=low
+
+  * Fix lock leak bug. Fixes: NB#133052.
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Wed, 19 Aug 2009 15:01:56 +0200
+
+rtcom-eventlogger-plugins (0.30-1) unstable; urgency=low
+
+  * Fix a memory leak in chat plugin.
+  * Fix linkage in pkgconfig file.
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Fri, 14 Aug 2009 09:10:32 +0200
+
+rtcom-eventlogger-plugins (0.29-1) unstable; urgency=low
+
+  * Added rtcom_el_plugin_call_log_voicemail() convenience function.
+  * Added rtcom_el_plugin_chat_set_read_by_tokens() convenience function.
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Fri, 07 Aug 2009 12:17:27 +0200
+
+rtcom-eventlogger-plugins (0.28-2) unstable; urgency=low
+
+  * Actually bumped source version to 0.28
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Fri, 31 Jul 2009 15:06:57 +0200
+
+rtcom-eventlogger-plugins (0.28-1) unstable; urgency=low
+
+  * Group by (local,remote) uids when grouping non-abook contacts.
+  * Added support for group-title in chat plugin.
+  * Removed GTK+ dependancy.
+  * Depend on eventlogger 0.78.
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Fri, 31 Jul 2009 14:46:06 +0200
+
+rtcom-eventlogger-plugins (0.27-1) unstable; urgency=low
+
+  * Implement voicemail event type support. Fixes: NB#120326.
+  * Fix content field code in chat/sms plugins.
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Fri, 17 Jul 2009 19:38:15 +0200
+
+rtcom-eventlogger-plugins (0.26-2) unstable; urgency=low
+
+  * Fix NULL handling in SQL to retrieve number of missed calls.
+    Fixes: NB#114838.
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Fri, 26 Jun 2009 09:14:59 +0200
+
+rtcom-eventlogger-plugins (0.26-1) unstable; urgency=low
+
+  * Chat, SMS plugins: return number of unread messages in "event-count" field
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Wed, 17 Jun 2009 14:20:50 +0200
+
+rtcom-eventlogger-plugins (0.25-2) unstable; urgency=low
+
+  * Bumped eventlogger dependancy to 0.70.
+  * Fixed retrieving read status for non-grouped events.
+    Fixes: NB#112409, NB#112061.
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Thu, 30 Apr 2009 07:58:01 +0200
+
+rtcom-eventlogger-plugins (0.25-1) unstable; urgency=low
+
+  * Move event text layout generation code to rtcom-eventlogger-ui.
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Tue, 28 Apr 2009 06:41:46 +0200
+
+rtcom-eventlogger-plugins (0.24-4) unstable; urgency=low
+
+  * Memory leak fix. Fixes: NB#101859
+  * Fix font weight in pango markup. Fixes: NB#107624, NB#107648.
+  * Don't use database in call plugin init if it couldn't be opened.
+    Fixes: NB#108009.
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Wed, 25 Mar 2009 15:39:29 +0100
+
+rtcom-eventlogger-plugins (0.24-3) unstable; urgency=low
+
+  * Check for attachments to detect VCard SMS and display the
+    text accordingly. Fixes: NB#104337.
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Sun, 22 Mar 2009 12:04:52 +0100
+
+rtcom-eventlogger-plugins (0.24-2) unstable; urgency=low
+
+  * Don't enable treating critical-level errors as fatal.
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Mon, 16 Mar 2009 16:57:21 +0100
+
+rtcom-eventlogger-plugins (0.24-1) unstable; urgency=low
+
+  * GTK+ is now a dependency.
+  * Use correct font color for secondary text. Fixes: NB#99747.
+  * Changed presence/service/default avatar icon sizes/padding to
+    better match the UI spec.
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Fri, 06 Mar 2009 12:06:00 +0100
+
+rtcom-eventlogger-plugins (0.23-1) unstable; urgency=low
+
+  * Count and show number of missed calls when needed. Fixes: NB#93976.
+  * Use correct icon for unread messages when not using grouping.
+    Fixes: NB#99357.
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Tue, 25 Feb 2009 15:08:05 +0100
+
+rtcom-eventlogger-plugins (0.22-2) unstable; urgency=low
+
+  * Fix pango markup to match the spec. Fixes: NB#98063, NB#99333.
+
+ -- Senko Rasic <senko.rasic@collabora.co.uk>  Tue, 27 Jan 2009 10:41:10 +0100
+
+rtcom-eventlogger-plugins (0.22-1) unstable; urgency=low
+
+  * Call convenience API: refactor some code and fix a potential bug.
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Fri,  2 Jan 2009 15:36:32 +0200
+
+rtcom-eventlogger-plugins (0.21-1) unstable; urgency=low
+
+  * Call plugin: date and time formatting as per layout spec.
+  * SMS/Chat: date and time formatting as per layout spec.
+  * SMS/Chat: truncating of message text.
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Wed, 31 Dec 2008 12:00:10 +0200
+
+rtcom-eventlogger-plugins (0.20-1) unstable; urgency=low
+
+  * Using the correct icons for call events
+
+ -- Lassi Syrjala <lassi.syrjala@nokia.com>  Fri, 12 Dec 2008 17:13:02 +0200
+
+rtcom-eventlogger-plugins (0.19-1) unstable; urgency=low
+
+  * Fixes: NB#94774.
+
+ -- Salvatore Iovene <siovene@debian.cosmic>  Wed, 10 Dec 2008 15:59:24 +0200
+
+rtcom-eventlogger-plugins (0.18-1) unstable; urgency=low
+
+  * Fixes: NB#89191.
+  * Fixes: NB#94149.
+
+ -- Salvatore Iovene <siovene@debian.cosmic>  Fri, 05 Dec 2008 17:01:54 +0200
+
+rtcom-eventlogger-plugins (0.17-1) unstable; urgency=low
+
+  * Using the right icons.
+
+ -- Salvatore Iovene <siovene@debian.cosmic>  Tue, 25 Nov 2008 17:01:53 +0200
+
+rtcom-eventlogger-plugins (0.16-1) unstable; urgency=low
+
+  * Correctly escaping special characters in the markup.
+
+ -- Salvatore Iovene <siovene@debian.cosmic>  Mon, 24 Nov 2008 12:32:33 +0200
+
+rtcom-eventlogger-plugins (0.15-1) unstable; urgency=low
+
+  * Fix logical IDs.
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Mon, 10 Nov 2008 11:30:28 +0200
+
+rtcom-eventlogger-plugins (0.14-1) unstable; urgency=low
+
+  * Bumping dependency from rtcom-eventlogger to 0.58.
+  * Hardcoding max length of 'name' in SMS and CHAT plugin, so that the date
+  and time always fit.
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Fri,  7 Nov 2008 16:40:49 +0200
+
+rtcom-eventlogger-plugins (0.13-1) unstable; urgency=low
+
+  * New function: rtcom_el_plugin_sms_get_event_by_message_token.
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Wed, 15 Oct 2008 10:18:48 +0300
+
+rtcom-eventlogger-plugins (0.12-1) unstable; urgency=low
+
+  * Fixing various style and optimization issues.
+  * sms.h: adding my favorite vim settings.
+  * Better call icon :)
+  * Adding the two new icons.
+  * Adding the CHAT plugin, and fixing the uninitialized gvalues in sms.
+  * sms-plugin.c, sms.h: differnciating the _ERROR flag with _TEMPORARY_ERROR
+  and _PERMANENT_ERROR; also, improving readability of the plugin code.
+  * Fixing debian/changelog: it was missing some blank spaces...
+  * Adding rtcom_el_plugin_call_delete_all.
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Mon, 13 Oct 2008 10:04:55 +0300
+
+rtcom-eventlogger-plugins (0.11-1) unstable; urgency=low
+
+  * Adding rtcom_el_plugin_call_delete_all
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Thu,  2 Oct 2008 19:40:43 +0300
+
+rtcom-eventlogger-plugins (0.10-1) unstable; urgency=low
+
+  * librtcom-eventlogger-plugins0.install,
+    librtcom-eventlogger-plugins-dev.install: moving the shared libraries from
+    the dev package.
+
+  * configure.ac: adding the --enable-debug flag, that will enable g_debug spam.
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Wed,  1 Oct 2008 13:30:49 +0300
+
+rtcom-eventlogger-plugins (0.9-1) unstable; urgency=low
+
+  * Silencing two more warnings. 
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Mon, 29 Sep 2008 11:29:13 +0300
+
+rtcom-eventlogger-plugins (0.8-1) unstable; urgency=low
+
+  * Silencing two warnings. 
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Mon, 29 Sep 2008 10:04:16 +0300
+
+rtcom-eventlogger-plugins (0.7-1) unstable; urgency=low
+
+  * Differenciating between GSM and VOIP meters.
+  * Adding dependency from libsqlite3-dev; bumping dependency from
+    rtcom-eventlogger to 0.48;
+  * call.h, call-plugin.c, rtcom-el-plugin-call.c: adding duration APIs.
+  * call.h: fix doxygen typos. 
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Wed, 24 Sep 2008 13:31:32 +0300
+
+rtcom-eventlogger-plugins (0.6-1) unstable; urgency=low
+
+  * Fixed a glib CRITICAL
+  * Clean up code in call plugin.
+  * Bump dependency from rtcom-eventlogger to 0.47
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Tue,  9 Sep 2008 12:41:00 +0300
+
+rtcom-eventlogger-plugins (0.5-1) unstable; urgency=low
+
+  * call-plugin.c: resolving the name of the remote contact to the i18n'ed
+  version of 'Unknown caller' when it's not defined.
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Fri,  5 Sep 2008 10:22:14 +0300
+
+rtcom-eventlogger-plugins (0.4-1) unstable; urgency=low
+
+  * {call,sms}-plugin.c: if the vcard-field is not there for that event, set
+    it to NULL.
+  * Dependency from rtcom-eventlogger bumped to 0.44
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Thu,  4 Sep 2008 17:39:28 +0300
+
+rtcom-eventlogger-plugins (0.3-1) unstable; urgency=low
+
+  * Fixing rtcom-eventlogger-plugins.pc.in.
+  * Fixing debian/librtcom-eventlogger-plugins0.install.
+  * Fix debian/librtcom-eventlogger-plugins-dev.install.
+  * Fixing rtcom-eventlogger-plugins.pc.in.
+  * Implementing convenience function for the call plugin.
+  * Fixing a typo in src/Makefile.am
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Wed,  3 Sep 2008 14:53:36 +0300
+
+rtcom-eventlogger-plugins (0.2-1) unstable; urgency=low
+
+  * Fixing /librtcom-eventlogger-plugins-dev.install so that installs stuff in
+    /usr/lib/* because there's going to be libraries.
+  * Bumping dependency from rtcom-eventlogger to 0.43.
+  * Renaming {smc,call}.c -> {sms,call}-plugin.c.
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Wed,  3 Sep 2008 12:02:47 +0300
+
+rtcom-eventlogger-plugins (0.1) unstable; urgency=low
+
+  * Initial Release. 
+
+ -- Salvatore Iovene <ext-salvatore.iovene@nokia.com>  Tue, 02 Sep 2008 14:22:36 +0300

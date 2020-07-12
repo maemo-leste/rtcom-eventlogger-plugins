@@ -1,0 +1,4 @@
+usr/include/rtcom-eventlogger-plugins/*
+usr/lib/pkgconfig/*
+usr/lib/librtcom-el-plugin-*.so
+
