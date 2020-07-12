@@ -1,3 +1,9 @@
+rtcom-eventlogger-plugins (1.4.1) unstable; urgency=medium
+
+  * Initial Maemo Leste packaging
+
+ -- Ivan J. <parazyd@dyne.org>  Sun, 12 Jul 2020 21:51:15 +0200
+
 rtcom-eventlogger-plugins (1.4-1+0m5) unstable; urgency=low
 
   * This entry has been added by BIFH queue processor
