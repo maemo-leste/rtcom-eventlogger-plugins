@@ -10,17 +10,17 @@ AM_CFLAGS = \
 
 libsms_includedir = $(includedir)
 libsms_la_SOURCES = sms-plugin.c
-libsms_la_LIBADD = $(RTCOM_EVENTLOGGER_PLUGINS_LIBS)
+libsms_la_LIBADD = $(RTCOM_EVENTLOGGER_PLUGINS_LIBS) librtcom-el-plugin-sms.la
 libsms_la_LDFLAGS = -module -avoid-version
 
 libcall_includedir = $(includedir)
 libcall_la_SOURCES = call-plugin.c
-libcall_la_LIBADD = $(RTCOM_EVENTLOGGER_PLUGINS_LIBS)
+libcall_la_LIBADD = $(RTCOM_EVENTLOGGER_PLUGINS_LIBS) librtcom-el-plugin-call.la
 libcall_la_LDFLAGS = -module -avoid-version
 
 libchat_includedir = $(includedir)
 libchat_la_SOURCES = chat-plugin.c
-libchat_la_LIBADD = $(RTCOM_EVENTLOGGER_PLUGINS_LIBS)
+libchat_la_LIBADD = $(RTCOM_EVENTLOGGER_PLUGINS_LIBS) librtcom-el-plugin-chat.la
 libchat_la_LDFLAGS = -module -avoid-version
 
 plugins_api_LTLIBRARIES = librtcom-el-plugin-sms.la librtcom-el-plugin-call.la librtcom-el-plugin-chat.la
