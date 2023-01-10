@@ -23,8 +23,7 @@ libchat_la_SOURCES = chat-plugin.c
 libchat_la_LIBADD = $(RTCOM_EVENTLOGGER_PLUGINS_LIBS) librtcom-el-plugin-chat.la
 libchat_la_LDFLAGS = -module -avoid-version
 
-plugins_api_LTLIBRARIES = librtcom-el-plugin-sms.la librtcom-el-plugin-call.la librtcom-el-plugin-chat.la
-plugins_apidir = $(libdir)
+lib_LTLIBRARIES = librtcom-el-plugin-sms.la librtcom-el-plugin-call.la librtcom-el-plugin-chat.la
 
 librtcom_el_plugin_sms_includedir = $(includedir)
 librtcom_el_plugin_sms_la_SOURCES = rtcom-el-plugin-sms.c
