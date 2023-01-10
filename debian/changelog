@@ -1,3 +1,9 @@
+rtcom-eventlogger-plugins (1.5.1) unstable; urgency=medium
+
+  * Fix linking problems
+
+ -- Merlijn Wajer <merlijn@wizzup.org>  Tue, 10 Jan 2023 17:03:37 +0100
+
 rtcom-eventlogger-plugins (1.5) unstable; urgency=medium
 
   * Replace obsolete debian variables
