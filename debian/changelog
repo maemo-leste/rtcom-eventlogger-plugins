@@ -1,3 +1,9 @@
+rtcom-eventlogger-plugins (1.5.2) unstable; urgency=medium
+
+  * Fix linking problems, part 2
+
+ -- Merlijn Wajer <merlijn@wizzup.org>  Tue, 10 Jan 2023 17:56:36 +0100
+
 rtcom-eventlogger-plugins (1.5.1) unstable; urgency=medium
 
   * Fix linking problems
